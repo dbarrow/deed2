@@ -1,0 +1,96 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Base styles */
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+body, html {
+  @apply m-0 p-0 h-full;
+  @apply bg-gray-50 text-gray-900;
+}
+
+/* Layout components */
+.sidebar {
+  @apply w-64 bg-gray-800 text-white h-screen flex flex-col;
+}
+
+.main-content {
+  @apply flex-1 flex flex-col overflow-hidden;
+}
+
+/* Form elements */
+input, select, textarea {
+  @apply px-3 py-2 border border-gray-300 rounded-md shadow-sm;
+  @apply focus:ring-2 focus:ring-blue-500 focus:border-blue-500;
+  @apply bg-white;
+}
+
+button {
+  @apply px-4 py-2 rounded-md font-medium transition-colors;
+  @apply focus:outline-none focus:ring-2 focus:ring-offset-2;
+}
+
+.btn-primary {
+  @apply bg-blue-600 text-white;
+  @apply hover:bg-blue-700;
+  @apply focus:ring-blue-500;
+}
+
+.btn-secondary {
+  @apply bg-gray-100 text-gray-700;
+  @apply hover:bg-gray-200;
+  @apply focus:ring-gray-500;
+}
+
+/* Card styles */
+.card {
+  @apply bg-white rounded-lg shadow-sm;
+  @apply border border-gray-200;
+}
+
+.card-header {
+  @apply p-4 border-b border-gray-200;
+  @apply flex items-center justify-between;
+}
+
+.card-body {
+  @apply p-4;
+}
+
+/* Map styles */
+.leaflet-container {
+  @apply w-full h-full;
+  background: #f3f4f6;
+}
+
+.map-label {
+  @apply absolute pointer-events-none z-[1000];
+  transform-origin: center center;
+}
+
+.map-label-content {
+  @apply absolute whitespace-nowrap;
+  transform-origin: center center;
+  will-change: transform;
+}
+
+.label-background {
+  @apply bg-white px-2 py-1 rounded text-sm leading-tight;
+  @apply shadow-sm border border-gray-200;
+  @apply text-gray-700;
+}
+
+/* Utility classes */
+.scrollbar-hide {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
